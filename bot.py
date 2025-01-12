@@ -1,8 +1,8 @@
-import discord
+import discord, os
 from discord.ext import commands, tasks
 from collections import defaultdict
 
-
+token = os.getenv("token")
 
 bot = commands.Bot(command_prefix='!', intents=discord.Intents.all())
 
@@ -72,4 +72,4 @@ async def update_top_5():
         last_top_5_message_id = message.id
 
 # Replace "YOUR_BOT_TOKEN" with your bot's token
-bot.run("ok")
+bot.run(token)
