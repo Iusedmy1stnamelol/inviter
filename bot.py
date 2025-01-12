@@ -71,5 +71,4 @@ async def update_top_5():
         message = await thread.send(leaderboard)
         last_top_5_message_id = message.id
 
-# Replace "YOUR_BOT_TOKEN" with your bot's token
 bot.run(token)
